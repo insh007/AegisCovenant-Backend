@@ -1,0 +1,19 @@
+{
+  "name": "aegiscovenant---backend",
+  "version": "1.0.0",
+  "description": "\"This an assignmet which is provided by AegisCovenant\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Inshad Ali",
+  "license": "ISC",
+    "dependencies": {
+    "axios": "^1.4.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
