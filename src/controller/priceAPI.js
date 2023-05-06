@@ -1,8 +1,8 @@
 /*
-Note : we can use axios package to fetch data to mimic the required output but after searching I did not find any
-       free API which mimic the required output so I randomly generate the required output to match with the output.
+Note: we can use axios package to fetch data to mimic the required output but after searching, I did not find any
+      "free" API which mimic the required output so I randomly generate the required output to match with the output.
 
-       Additonally I make the frontend which is mentioned in the assignment by choice and also for implementing 
+       Additonally I make the frontend which is mentioned in the assignment by choice and also I implementing 
        the Authentication part & to save user data in Database I used MongoDB so indirectly this project converts 
        into a MERN stack project.
 */

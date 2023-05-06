@@ -1,12 +1,17 @@
 const express = require('express')
 const router = express.Router()
 const {fetchData} = require('../controller/priceAPI')
+const {createUser, login} = require('../controller/userController')
+const {authentication} = require('../middlewares/auth')
 
-router.get('/test-me', (req, res) => {
-    res.send("test is done")
-})
+/*----------------- Create User --------------- */
+router.post("/createUser", createUser)
+
+/*----------------- Login User --------------- */
+router.post("/api/login", login)
 
 
-router.get('/flights', fetchData)
+// authentication ,
+router.get('/flights', authentication , fetchData)
 
 module.exports = router
