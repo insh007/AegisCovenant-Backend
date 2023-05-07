@@ -107,3 +107,15 @@ Error Response structure
   msg: ""
 }
 ```
+
+# Installation and Setup
+1. Clone the repository to your local machine.
+2. Run npm install to install the dependencies.
+3. Run npm start to start the app.
+
+# Technologies Used
+1. MongoDB: a NoSQL database used for storing and retrieving data
+2. Express.js: a web application framework for Node.js
+3. React: a JavaScript library for building user interfaces
+4. Node.js: a JavaScript runtime environment for running server-side code
+5. HTML & CSS: for building web pages
