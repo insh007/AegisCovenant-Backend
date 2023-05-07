@@ -1,12 +1,25 @@
 /*
-Note: we can use axios package to fetch data to mimic the required output but after searching, I did not find any
-      "free" API which mimic the required output so I randomly generate the required output to match with the output.
+Note: Due to the unavailability of a suitable API to mimic the required output, the data has been randomly generated to match the expected output.
+Additionally, as a personal choice, I have created a frontend for this project as mentioned in the assignment.
+Furthermore, for the implementation of authentication and user data storage, I have utilized MongoDB, thereby transforming this project into a MERN stack application.
 
-       Additonally I make the frontend which is mentioned in the assignment by choice and also I implementing 
-       the Authentication part & to save user data in Database I used MongoDB so indirectly this project converts 
-       into a MERN stack project.
+we can use axios like this:
+    axios.get('https://dummy/data');
 */
 
+
+/**
+ * Fetches flight prices for a given source, destination, and date
+ *
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ * @param {string} req.query.Source - Source city code
+ * @param {string} req.query.Destination - Destination city code
+ * @param {string} req.query.Date - Departure date
+ *
+ * @returns {Object} Object containing airline prices
+ * @throws {Object} Error object containing message property if any error occurs
+ */
 const fetchData = async function (req, res) {
     try {
         const { Source, Destination, Date } = req.query;
@@ -22,7 +35,7 @@ const fetchData = async function (req, res) {
         airlines.forEach((airline) => {
             const minPrice = 1000; // Assuming Minimum price
             const maxPrice = 5000; // Assuming Maximum price
-            const randomPrice = Source==Destination ? 0 : Math.floor(Math.random() * (maxPrice - minPrice))+ minPrice;
+            const randomPrice = Source == Destination ? 0 : Math.floor(Math.random() * (maxPrice - minPrice)) + minPrice;
             prices[airline] = `₹${randomPrice}`;
         });
 

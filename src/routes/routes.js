@@ -10,7 +10,7 @@ router.post("/createUser", createUser)
 /*----------------- Login User --------------- */
 router.post("/api/login", login)
 
-// authentication ,
+/*----------------- Get Flights Schedule --------------- */
 router.get('/flights', authentication , fetchData)
 
 

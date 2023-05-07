@@ -4,6 +4,17 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const { isValidString, isValidName, isValidEmail, isValidPassword } = require('../validation/validation')
 
+
+/**
+ * Creates a user with the given name, email, and password.
+ * 
+ * @function
+ * @async
+ * @param {object} req - The HTTP request object.
+ * @param {object} res - The HTTP response object.
+ * @returns {Promise} A Promise that resolves with a JSON object containing the status of the operation and any relevant data.
+ */
+
 const createUser = async function (req, res) {
     try {
         const data = req.body
@@ -49,6 +60,18 @@ const createUser = async function (req, res) {
     }
 }
 
+
+/**
+ * This function handles user login requests. 
+ *
+ * @function
+ * @async
+ * @param {Object} req - The HTTP request object.
+ * @param {Object} res - The HTTP response object.
+ * @returns {Object} The HTTP response containing the token and a status code.
+ * @throws {Object} An error message and status code if an error occurs.
+ */
+
 const login = async function (req, res) {
     try {
 
@@ -84,7 +107,7 @@ const login = async function (req, res) {
         })
     }
     catch (err) {
-        return res.status(500).send({ status: false, msg: err.message })
+        return res.status(500).send({ status: false, message: err.message })
     }
 }
 
