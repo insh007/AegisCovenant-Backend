@@ -28,7 +28,7 @@ mongoose.connect(process.env.MONGO_STRING, {
 app.use('/', route)
 
 app.use("/*", function (req, res) {
-    res.status(400).send("Provided url is wrong")
+    res.status(400).send("Backend is deployed successfully, to check hit /test")
 })
 
 app.listen(process.env.PORT, () => console.log("App is running on Port", process.env.PORT))

@@ -10,8 +10,12 @@ router.post("/createUser", createUser)
 /*----------------- Login User --------------- */
 router.post("/api/login", login)
 
-
 // authentication ,
 router.get('/flights', authentication , fetchData)
 
+
+/*----------------- for test purpose --------------- */
+router.get('/test', (req, res) => {
+    res.send("please refer to routes paths...")
+})
 module.exports = router
