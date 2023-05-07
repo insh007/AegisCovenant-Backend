@@ -85,6 +85,8 @@ Error Response structure
 
 # GET /flights (Fetch Flights prices)
 
+#### authentication implemented
+
 Response format On success -
 
 ```
