@@ -8,7 +8,7 @@ const app = express()
 app.use(express.json())
 
 app.use(cors({
-    origin: ["http://localhost:5173", "https://ages-covenant-app.onrender.com"]
+    origin: ["http://localhost:5173", "https://ages-covenants-app.onrender.com"]
 }))
 
 // Add the middleware function here
